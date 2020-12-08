@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-number = 3
 if number > 9:
     new = number % 10
 elif number < -9:
