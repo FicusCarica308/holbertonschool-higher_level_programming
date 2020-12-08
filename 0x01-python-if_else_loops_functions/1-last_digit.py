@@ -6,7 +6,7 @@ if number > 9:
     new = number % 10
 elif number < -9:
     new = number * -1 % 10
-string = "last digit of " + str(number) + " is " + str(new)
+string = "Last digit of " + str(number) + " is " + str(new)
 if new > 5:
     print("{} and is greater than 5".format(string))
 elif new < 6 and new != 0:
