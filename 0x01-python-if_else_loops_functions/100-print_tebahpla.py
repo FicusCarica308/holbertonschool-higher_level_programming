@@ -6,4 +6,3 @@ for i in range(122, 96, -1):
     else:
         print("{:c}".format(i - 32), end="")
     count = count + 1
-print()
