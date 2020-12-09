@@ -20,11 +20,10 @@ size_t find_max_index(const listint_t *h, int num)
 }
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *temp, *before, *after, *new;
+	listint_t *temp, *new;
 	int max_idx = 0;
 	int i = 0;
-	(void)before;
-	(void)after;
+
 	if (head == NULL)
 		return (NULL);
 	new = malloc(sizeof(listint_t));
@@ -33,10 +32,14 @@ listint_t *insert_node(listint_t **head, int number)
 	new->n = number;
 	temp = *head;
 	max_idx = find_max_index(temp, number);
-	for (i = 1; i < max_idx; i++)
+	if (max_idx == 0)
 	{
-		temp = temp->next;
+		new->next = *head;
+		*head = new;
+		return (new);
 	}
+	for (i = 1; i < max_idx; i++)
+		temp = temp->next;
 	new->next = temp->next;
 	temp->next = new;
 	return (new);
