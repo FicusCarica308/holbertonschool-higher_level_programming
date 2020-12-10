@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#this program uses calculator_1 module to interpret input into a calculator
+# this program uses calculator_1 module to interpret input into a calculator
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
