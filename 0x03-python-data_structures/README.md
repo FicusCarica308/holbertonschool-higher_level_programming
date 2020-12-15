@@ -5,4 +5,4 @@ Date :\
 Project :\
 0x03-python-data_structures
 Project Description :\
-This project contains difference definitions using python data structures\
+This project contains difference definitions using python data structures
