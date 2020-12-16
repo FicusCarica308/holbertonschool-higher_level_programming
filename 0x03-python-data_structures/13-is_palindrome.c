@@ -18,24 +18,19 @@ int check_array(int *array, int lgt)
 }
 int is_palindrome(listint_t **head)
 {
-    int *array;
+    int *array = malloc(sizeof(int*) * 1);
     int i = 0;
     int list_lgt = 0;
     listint_t *temp = *head;
 
     for (list_lgt = 0; temp != NULL; list_lgt++)
+    {
+        array[list_lgt] = temp->n;
         temp = temp->next;
-
+    }
     if (list_lgt == 0)
         return (1);
-
-    array = malloc(sizeof(int) * list_lgt);
-    temp = *head;
-    for (i = 0; i < list_lgt; i++)
-        {
-            array[i] = temp->n;
-            temp = temp->next;
-        }
+        
     if (check_array(array, list_lgt - 1) == 1)
 		return (1);
     free(array);
