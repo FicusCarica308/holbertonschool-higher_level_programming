@@ -23,11 +23,8 @@ int is_palindrome(listint_t **head)
     int list_lgt = 0;
     listint_t *temp = *head;
 
-    while (temp != NULL)
-    {
-        list_lgt++;
+    for (list_lgt = 0; temp != NULL; list_lgt++)
         temp = temp->next;
-    }
 
     if (list_lgt == 0)
         return (1);
