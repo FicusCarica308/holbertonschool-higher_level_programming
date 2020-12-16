@@ -42,5 +42,6 @@ int is_palindrome(listint_t **head)
     }
     if (check_array(array, list_lgt - 1) == 1)
 		return (1);
+    free(array);
     return (0);
 }
