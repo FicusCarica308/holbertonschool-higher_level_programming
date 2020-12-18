@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     final = 0
-    if isinstance(roman_string, str) is False or roman_string is None:
+    if isinstance(roman_string, str) is False or roman_string is None or roman_string == "":
         return 0
     numerals = {'MMM': 3000, 'MM': 2000, 'M': 1000, 'CM': 900, 'DCCC': 800,
                 'DCC': 700, 'DC': 600, 'D': 500, 'CD': 400, 'CCC': 300,
