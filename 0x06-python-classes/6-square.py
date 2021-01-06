@@ -75,6 +75,8 @@ class Square:
         while also leaving spaces in the front of each line based on the
         position of the square given as tuple (only position[0] is used)
         """
+        for k in range(self.position[1]):
+                print("")
         for i in range(0, self.size):
             for j in range(0, self.size + self.position[0]):
                 if j < self.position[0]:
