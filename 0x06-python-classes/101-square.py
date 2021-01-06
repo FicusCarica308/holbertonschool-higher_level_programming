@@ -100,7 +100,7 @@ class Square:
         output = ""
         if self.size != 0:
             for k in range(self.position[1]):
-                    output += ""
+                    output += "\n"
         for i in range(0, self.size):
             for j in range(0, self.size + self.position[0]):
                 if j < self.position[0]:
@@ -110,4 +110,4 @@ class Square:
             output += "\n"
         if self.size == 0:
             output += "\n"
-        return output
+        return output[0:-1]
