@@ -43,8 +43,11 @@ class Square:
         to see if the given value is a tuple or is positive
         USAGE: class_name.position = new_value
         """
-        if isinstance(value, tuple) is not True\
-                or value[0] < 0 or value[1] < 0:
+        if isinstance(value, tuple) is not True:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif isinstance(value[0]) is not True or isinstance(value[1]) is not True:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
