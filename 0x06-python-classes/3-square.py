@@ -3,7 +3,9 @@
 
 
 class Square:
-    """Square class with a private field containing (__size)"""
+    """Square class with a private field containing (__size)
+    and a definitions that returns the area of the square
+    """
     def __init__(self, size=0):
         """Function that initializes pivate attribute
         containing the size of the square with exception check
