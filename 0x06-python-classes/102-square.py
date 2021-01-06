@@ -39,17 +39,28 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-        
+
         # --------------------------------------------
     def __eq__(self, other):
+        """Operator"""
         return (self.__size * self.__size) == (other.__size * other.__size)
+
     def __lt__(self, other):
+        """Operator"""
         return (self.__size * self.__size) < (other.__size * other.__size)
+
     def __le__(self, other):
+        """Operator"""
         return (self.__size * self.__size) <= (other.__size * other.__size)
+
     def __ne__(self, other):
+        """Operator"""
         return (self.__size * self.__size) != (other.__size * other.__size)
+
     def __gt__(self, other):
+        """Operator"""
         return (self.__size * self.__size) > (other.__size * other.__size)
+
     def __ge__(self, other):
+        """Operator"""
         return (self.__size * self.__size) >= (other.__size * other.__size)
