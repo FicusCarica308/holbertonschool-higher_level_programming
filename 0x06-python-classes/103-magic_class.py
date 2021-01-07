@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import math
-"""Place"""
+"""Place
 
-
+"""
 class MagicClass:
     """Place"""
     def __init__(self, radius):
