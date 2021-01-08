@@ -1,0 +1,52 @@
+# 0-add_integer.txt
+
+=================================
+ Test cases for 0-add_integer.py
+=================================
+
+This Doctest contains test cases for a module called ``0-add_integer.py``
+using a method named ``add_integer``.
+
+Addition:
+=================
+Returns the addition of two Integers or Floats.
+Integers:
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(5, 5)
+    10
+
+Example for floats Will convert floats ot integers !!!
+Floats:
+
+::
+
+    >>> add_integer(5.7, 5.4)
+    10
+    >>> add_integer(5.7, 4)
+    9
+    >>> add_integer(7, 5.4)
+    12
+
+Exception tests:
+==================
+
+::
+
+    >>> add_integer('c', 4)
+    Traceback (innermost last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, 'c')
+    Traceback (innermost last):
+    TypeError: b must be an integer
+
+    >>> add_integer(None, 4)
+    Traceback (innermost last):
+    TypeError: a must be an integer
+
+    >>> add_integer(10, "3")
+    Traceback (innermost last):
+    TypeError: b must be an integer
