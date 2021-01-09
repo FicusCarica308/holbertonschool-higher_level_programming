@@ -1,0 +1,38 @@
+# 3-say_my_name.txt
+
+=================================
+ Test cases for 3-say_my_name.py
+=================================
+
+This Doctest contains test cases for a module called ``3-say_my_name.py``
+using a method named ``say_my_name``.
+
+Examples:
+=================
+import for test==
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+======================================================
+names:
+::
+    >>> say_my_name("Manuel", "Figueroa")
+    My name is Manuel Figueroa
+
+Failures:
+::
+    >>> say_my_name(3, "Figueroa")
+    Traceback (innermost last):
+    TypeError: first_name must be a string
+
+Failures:
+::
+    >>> say_my_name("Manuel", 3)
+    Traceback (innermost last):
+    TypeError: last_name must be a string
+
+Failures:
+::
+    >>> cool = list("why me")
+    >>> say_my_name("Manuel", cool)
+    Traceback (innermost last):
+    TypeError: last_name must be a string
