@@ -1,0 +1,50 @@
+# 0-add_integer.txt
+
+=================================
+ Test cases for 0-add_integer.py
+=================================
+
+This Doctest contains test cases for a module called ``0-add_integer.py``
+using a method named ``add_integer``.
+
+Examples:
+=================
+Integers:
+::
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+    >>> matrix = [[1, 2, 3,], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Not list:
+::
+    >>> other_matrix = [{"int": 10}, {"int": 10}]
+    >>> matrix_divided(other_matrix, 3)
+    Traceback (innermost last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> other_matrix = {"type": "why"}
+    >>> matrix_divided(other_matrix, 3)
+    Traceback (innermost last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+list with junk:
+::
+    >>> other_matrix = [[1, 2, 3], ["23", "23", "23"]]
+    >>> matrix_divided(other_matrix, 3)
+    Traceback (innermost last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+list with rows different sizes:
+::
+    >>> other_matrix = [[1, 2, 3], [3, 2]]
+    >>> matrix_divided(other_matrix, 3)
+    Traceback (innermost last):
+    TypeError: Each row of the matrix must have the same size
+
+div by zero:
+::
+    >>> matrix = [[1, 2, 3,], [4, 5, 6]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (innermost last):
+    ZeroDivisionError: division by zero
