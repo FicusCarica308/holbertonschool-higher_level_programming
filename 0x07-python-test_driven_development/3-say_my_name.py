@@ -6,7 +6,7 @@
 """
 
 
-def say_my_name(first_name="", last_name=""):
+def say_my_name(first_name, last_name=""):
     """
     say_my_name:
         prints first_name and last_name in stdout
