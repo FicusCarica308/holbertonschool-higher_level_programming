@@ -132,3 +132,9 @@ class Rectangle:
         area_2 = other.__height * other.__width
         return area_1 < area_2
 # ============================================================
+
+    @classmethod
+    def square(cls, size=0):
+        """sets height and width to the same value"""
+        cls = Rectangle(size, size)
+        return cls
