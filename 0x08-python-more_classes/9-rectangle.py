@@ -81,7 +81,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 # ============================================================
-   
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ returns the biggest rectangle based on the area"""
@@ -98,7 +98,7 @@ class Rectangle:
         """Operator"""
         area_1 = self.__height * self.__width
         area_2 = other.__height * other.__width
-        return area_1 > area_2
+        return area_2 > area_1
 # ============================================================
 
     @classmethod
