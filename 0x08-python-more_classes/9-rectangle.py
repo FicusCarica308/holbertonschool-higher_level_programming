@@ -48,26 +48,26 @@ class Rectangle:
 
     def area(self):
         """gets the area of the rectangle object"""
-        return self.height * self.width
+        return self.__height * self.__width
 
     def perimeter(self):
         """gets the perimeter of the rectangle object"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (2 * self.width) + (2 * self.height)
+            return (2 * self.__width) + (2 * self.__height)
 # ============================================================
 
     def __str__(self):
         """when print() is called prints square using '#'"""
         output = ""
-        if self.height == 0 or self.width == 0:
+        if self.__height == 0 or self.__width == 0:
             return output
         else:
-            for height in range(self.height):
-                for width in range(self.width):
+            for height in range(self.__height):
+                for width in range(self.__width):
                     output += str(self.print_symbol)
-                if height != self.height - 1:
+                if height != self.__height - 1:
                     output += "\n"
         return output
 
