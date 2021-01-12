@@ -62,7 +62,7 @@ class Rectangle:
         """when print() is called prints square using '#'"""
         output = ""
         if self.height == 0 or self.width == 0:
-            return output
+            output = "\n"
         else:
             for height in range(self.height):
                 for width in range(self.width):
