@@ -69,7 +69,7 @@ class Rectangle:
                     output += str(self.print_symbol)
                 if height != self.height - 1:
                     output += '\n'
-        return output
+        return output[:-1]
 
     def __repr__(self):
         """returns data for program to recreate a class object"""
