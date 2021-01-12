@@ -62,13 +62,14 @@ class Rectangle:
         """when print() is called prints square using '#'"""
         output = ""
         if self.height == 0 or self.width == 0:
-            output = "\n"
+            return output
         else:
             for height in range(self.height):
                 for width in range(self.width):
                     output += str(self.print_symbol)
-                output += "\n"
-        return output[:-1]
+                if height != self.height - 1:
+                    output += "\n"
+        return output
 
     def __repr__(self):
         """returns data for program to recreate a class object"""
