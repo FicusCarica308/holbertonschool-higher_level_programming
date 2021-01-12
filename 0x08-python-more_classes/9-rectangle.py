@@ -87,7 +87,7 @@ class Rectangle:
         """ returns the biggest rectangle based on the area"""
         if isinstance(rect_1, Rectangle) is not True:
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif isinstance(rect_2, Rectangle) is not True:
+        if isinstance(rect_2, Rectangle) is not True:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_2 > rect_1:
             return rect_2
