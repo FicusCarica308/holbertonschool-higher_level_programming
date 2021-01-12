@@ -89,11 +89,9 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif isinstance(rect_2, Rectangle) is not True:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1 > rect_2:
-            return rect_1
-        elif rect_2 > rect_1:
+        if rect_2 > rect_1:
             return rect_2
-        elif rect_1 == rect_2:
+        else:
             return rect_1
 
     def __gt__(self, other):
@@ -101,34 +99,4 @@ class Rectangle:
         area_1 = self.__height * self.__width
         area_2 = other.__height * other.__width
         return area_1 > area_2
-
-    def __eq__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 == area_2
-
-    def __ge__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 >= area_2
-
-    def __le__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 <= area_2
-
-    def __ne__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 != area_2
-
-    def __lt__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 < area_2
 # ============================================================
