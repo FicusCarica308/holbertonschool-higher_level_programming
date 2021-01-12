@@ -82,7 +82,7 @@ class Rectangle:
         print("Bye rectangle...")
 # ============================================================
 
-def bigger_or_equal(rect_1, rect_2):
+    def bigger_or_equal(rect_1, rect_2):
         """returns bigger rectangle"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
