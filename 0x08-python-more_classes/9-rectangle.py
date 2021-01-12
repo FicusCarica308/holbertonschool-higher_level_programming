@@ -67,9 +67,8 @@ class Rectangle:
             for height in range(self.height):
                 for width in range(self.width):
                     output += str(self.print_symbol)
-                if height != self.height - 1:
-                    output += "\n"
-        return output
+                output += "\n"
+        return output[:-1]
 
     def __repr__(self):
         """returns data for program to recreate a class object"""
