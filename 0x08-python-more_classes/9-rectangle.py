@@ -81,7 +81,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 # ============================================================
-
+   
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ returns the biggest rectangle based on the area"""
@@ -89,13 +89,20 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif isinstance(rect_2, Rectangle) is not True:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_2.area() > rect_1.area():
+        if rect_2 > rect_1:
             return rect_2
         else:
             return rect_1
+
+    def __gt__(self, other):
+        """Operator"""
+        area_1 = self.__height * self.__width
+        area_2 = other.__height * other.__width
+        return area_1 > area_2
 # ============================================================
 
     @classmethod
     def square(cls, size=0):
         """sets height and width to the same value"""
-        return cls(size, size)
+        cls = Rectangle(size, size)
+        return cls
