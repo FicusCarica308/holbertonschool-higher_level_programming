@@ -101,3 +101,8 @@ class Rectangle:
         return area_2 > area_1
 # ============================================================
 
+    @classmethod
+    def square(cls, size=0):
+        """sets height and width to the same value"""
+        cls = Rectangle(size, size)
+        return cls
