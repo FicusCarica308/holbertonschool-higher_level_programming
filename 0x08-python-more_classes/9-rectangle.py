@@ -73,7 +73,7 @@ class Rectangle:
 
     def __repr__(self):
         """returns data for program to recreate a class object"""
-        return "Rectangle({self.width}, {self.height})".format(self=self)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 # ============================================================
 
     def __del__(self):
