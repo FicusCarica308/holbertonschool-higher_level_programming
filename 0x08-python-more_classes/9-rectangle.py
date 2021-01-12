@@ -104,5 +104,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """sets height and width to the same value"""
-        cls = Rectangle(size, size)
-        return cls
+        return cls(size, size)
