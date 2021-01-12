@@ -89,16 +89,10 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif isinstance(rect_2, Rectangle) is not True:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_2 > rect_1:
+        if rect_2.area() > rect_1.area():
             return rect_2
         else:
             return rect_1
-
-    def __gt__(self, other):
-        """Operator"""
-        area_1 = self.__height * self.__width
-        area_2 = other.__height * other.__width
-        return area_1 > area_2
 # ============================================================
 
     @classmethod
