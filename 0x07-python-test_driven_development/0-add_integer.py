@@ -27,9 +27,9 @@ def add_integer(a, b=98):
         10
     """
     if (a != a):
-        raise TypeError("a must be an integer")
+        return
     if (b != b):
-        raise TypeError("b must be an integer")
+        return
     Not_a_num2 = b != b
     if isinstance(a, (int, float)) is not True:
         raise TypeError("a must be an integer")
