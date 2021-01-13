@@ -26,10 +26,13 @@ def add_integer(a, b=98):
         >>> add_integer(5.7, 5.4)
         10
     """
-    Not_a_num = a != a
-    Not_a_num2 = b != b
-    if isinstance(a, (int, float)) is not True or Not_a_num is not False:
+    if (a != a):
         raise TypeError("a must be an integer")
-    elif isinstance(b, (int, float)) is not True or Not_a_num2 is not False:
+    if (b != b):
+        raise TypeError("b must be an integer")
+    Not_a_num2 = b != b
+    if isinstance(a, (int, float)) is not True:
+        raise TypeError("a must be an integer")
+    elif isinstance(b, (int, float)) is not True:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
