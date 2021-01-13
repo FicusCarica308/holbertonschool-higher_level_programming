@@ -26,7 +26,7 @@ def add_integer(a, b=98):
         >>> add_integer(5.7, 5.4)
         10
     """
-    if isinstance(a, (int, float)) is not True:
+    if a is None or isinstance(a, (int, float)) is not True:
         raise TypeError("a must be an integer")
     elif isinstance(b, (int, float)) is not True:
         raise TypeError("b must be an integer")
