@@ -6,7 +6,7 @@
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=None):
     """
     matrix_divided:
         divides a matrix of float/int by a given divisor
