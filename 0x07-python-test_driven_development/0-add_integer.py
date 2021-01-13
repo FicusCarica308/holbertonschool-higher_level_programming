@@ -6,7 +6,7 @@
 """
 
 
-def add_integer(a, b=98):
+def add_integer(a=None, b=None):
     """
     add_integer:
         adds two integers/floats
@@ -26,11 +26,6 @@ def add_integer(a, b=98):
         >>> add_integer(5.7, 5.4)
         10
     """
-    if (a != a):
-        return
-    if (b != b):
-        return
-    Not_a_num2 = b != b
     if isinstance(a, (int, float)) is not True:
         raise TypeError("a must be an integer")
     elif isinstance(b, (int, float)) is not True:
