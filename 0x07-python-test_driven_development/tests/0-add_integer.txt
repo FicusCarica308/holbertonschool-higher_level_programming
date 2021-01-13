@@ -51,7 +51,7 @@ Exception tests:
     Traceback (innermost last):
     TypeError: b must be an integer
 
-    >>> add_integer(None, None)
+    >>> add_integer()
     Traceback (innermost last):
     TypeError: a must be an integer
 
