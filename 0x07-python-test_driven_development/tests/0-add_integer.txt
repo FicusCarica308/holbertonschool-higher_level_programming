@@ -50,3 +50,11 @@ Exception tests:
     >>> add_integer(10, "3")
     Traceback (innermost last):
     TypeError: b must be an integer
+
+    >>> add_integer(None, None)
+    Traceback (innermost last):
+    TypeError: a must be an integer
+
+    >>> add_integer(20, None)
+    Traceback (innermost last):
+    TypeError: b must be an integer
