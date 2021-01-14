@@ -8,6 +8,9 @@ def text_indentation(text=None):
     print_string = ""
     if type(text) is not str:
         raise TypeError("text must be a string")
+    if text == "":
+        print()
+        return
     for i in range(len(text)):
         new_string += text[i]
         if text[i] == '.' or text[i] == '?' or text[i] == ':':
