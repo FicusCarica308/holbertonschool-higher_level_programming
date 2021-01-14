@@ -6,8 +6,6 @@ def text_indentation(text=None):
     """The def that adds the new lines"""
     new_string = ""
     print_string = ""
-    if text == 12:
-        return
     if type(text) is not str:
         raise TypeError("text must be a string")
     for i in range(len(text)):
