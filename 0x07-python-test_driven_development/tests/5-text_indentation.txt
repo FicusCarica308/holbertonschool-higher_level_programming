@@ -55,3 +55,22 @@ With bad arguments:
     >>> text_indentation(3)
     Traceback (innermost last):
     TypeError: text must be a string
+
+    >>> text = 34
+    >>> text_indentation(text)
+    Traceback (innermost last):
+    TypeError: text must be a string
+
+With variable input:
+::
+    >>> text = "holberton.school"
+    >>> text_indentation(text)
+    holberton.
+    <BLANKLINE>
+    school
+
+Blank line:
+::
+    >>> text = ""
+    >>> text_indentation(text)
+    <BLANKLINE>
