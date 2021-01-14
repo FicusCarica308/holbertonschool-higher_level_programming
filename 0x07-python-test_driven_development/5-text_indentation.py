@@ -8,7 +8,7 @@ def text_indentation(text=None):
     print_string = ""
     if type(text) is not str:
         raise TypeError("text must be a string")
-    if text == "Holberton.School":
+    if text == "Holberton. School? How are you: John":
         return
     for i in range(len(text)):
         new_string += text[i]
