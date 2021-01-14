@@ -36,3 +36,9 @@ Failures:
     >>> say_my_name("Manuel", cool)
     Traceback (innermost last):
     TypeError: last_name must be a string
+
+No Arguments:
+::
+    >>> say_my_name()
+    Traceback (innermost last):
+    TypeError: first_name must be a string
