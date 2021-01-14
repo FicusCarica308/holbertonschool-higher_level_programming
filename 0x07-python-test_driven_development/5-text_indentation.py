@@ -2,7 +2,7 @@
 """module contains a def to add new lines to a given text"""
 
 
-def text_indentation(text):
+def text_indentation(text=None):
     """The def that adds the new lines"""
     new_string = ""
     print_string = ""
