@@ -73,4 +73,3 @@ Blank line:
 ::
     >>> text = ""
     >>> text_indentation(text)
-    <BLANKLINE>
