@@ -44,12 +44,6 @@ With text_indentation:
     <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-With no arguments:
-::
-    >>> text_indentation()
-    Traceback (innermost last):
-    TypeError: text must be a string
-
 With bad arguments:
 ::
     >>> text_indentation(3)
