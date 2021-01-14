@@ -18,4 +18,4 @@ def text_indentation(text=None):
         if new_string[i] == ' ' and new_string[i - 1] == '\n':
             continue
         print_string += new_string[i]
-    print(print_string) 
+    print(print_string)
