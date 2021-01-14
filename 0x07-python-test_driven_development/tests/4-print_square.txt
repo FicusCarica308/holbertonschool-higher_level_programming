@@ -32,3 +32,9 @@ Failures:
     >>> print_square(-1)
     Traceback (innermost last):
     ValueError: size must be >= 0
+
+no argument:
+::
+    >>> print_square()
+    Traceback (innermost last):
+    TypeError: size must be an integer

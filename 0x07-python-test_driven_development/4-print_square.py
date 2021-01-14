@@ -2,7 +2,7 @@
 """prints a square"""
 
 
-def print_square(size):
+def print_square(size=None):
     """prints out our square using size in stdout with #"""
     if isinstance(size, int) is not True:
         raise TypeError("size must be an integer")
@@ -12,6 +12,4 @@ def print_square(size):
     for i in range(0, size):
         for j in range(0, size):
             print("#", end="")
-        print()
-    if size == 0:
         print()
