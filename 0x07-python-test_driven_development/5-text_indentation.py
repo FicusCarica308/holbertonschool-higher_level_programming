@@ -6,12 +6,17 @@ def text_indentation(text=None):
     """The def that adds the new lines"""
     new_string = ""
     print_string = ""
+    found = 0
     if type(text) is not str:
         raise TypeError("text must be a string")
     for i in range(len(text)):
         new_string += text[i]
         if text[i] == '.' or text[i] == '?' or text[i] == ':':
+            found += 1
             new_string += "\n\n"
+    if found == 0:
+        print(text)
+        return
     for i in range(len(new_string)):
         if new_string[i] == ' ' and new_string[i - 1] == '\n':
             continue
