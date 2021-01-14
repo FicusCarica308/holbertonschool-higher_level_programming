@@ -53,5 +53,5 @@ With no arguments:
 With bad arguments:
 ::
     >>> text_indentation(3)
-    Traceback(innermost last)
+    Traceback (innermost last):
     TypeError: text must be a string
