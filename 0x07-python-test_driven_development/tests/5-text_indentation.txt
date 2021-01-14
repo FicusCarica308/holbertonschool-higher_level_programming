@@ -49,3 +49,9 @@ With no arguments:
     >>> text_indentation()
     Traceback (innermost last):
     TypeError: text must be a string
+
+With bad arguments:
+::
+    >>> text_indentation(3)
+    Traceback(innermost last)
+    TypeError: text must be a string
