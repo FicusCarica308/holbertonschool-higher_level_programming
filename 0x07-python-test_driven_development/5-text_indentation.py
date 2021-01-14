@@ -10,6 +10,7 @@ def text_indentation(text=None):
         raise TypeError("text must be a string")
     if text == "":
         print()
+        print()
         return
     for i in range(len(text)):
         new_string += text[i]
