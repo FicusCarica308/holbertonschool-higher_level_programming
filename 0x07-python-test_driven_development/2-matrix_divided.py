@@ -38,6 +38,6 @@ def matrix_divided(matrix=None, div=None):
                 raise TypeError(matrix_error)
             new_matrix[row][column] = round(matrix[row][column] / div, 2)
         if column != row_lgt - 1:
-                raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError("Each row of the matrix must have the same size")
 
     return new_matrix
