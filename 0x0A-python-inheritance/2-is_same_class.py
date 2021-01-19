@@ -4,6 +4,6 @@
 
 def is_same_class(obj, a_class):
     """ Tests if object given object is the same"""
-    if type(obj) is not a_class:
+    if obj.__class__ != a_class:
         return False
     return True
