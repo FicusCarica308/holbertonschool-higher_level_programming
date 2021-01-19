@@ -3,5 +3,8 @@
 
 
 def is_kind_of_class(obj, a_class):
-    """ Tests if object given is class of object is the same"""
+    """
+    Tests if object given is the same
+    class or subclass of the given class
+    """
     return isinstance(obj, a_class)
