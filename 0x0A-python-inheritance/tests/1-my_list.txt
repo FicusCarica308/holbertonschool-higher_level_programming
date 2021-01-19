@@ -6,6 +6,10 @@
 
     >>> MyList = __import__('1-my_list').MyList
     >>> test_list = MyList()
+    >>> neg_list = MyList()
+    >>> one_neg = MyList()
+    >>> one_ele = MyList()
+    >>> one_pos = MyList()
 
 ORDER TESTS
 =================
@@ -22,3 +26,30 @@ Integers:
     >>> test_list.print_sorted()
     [1, 2, 3, 4, 5]
     
+    >>> neg_list = MyList()
+    >>> neg_list.append(-1)
+    >>> neg_list.append(-4)
+    >>> neg_list.append(-2)
+    >>> neg_list.append(-3)
+    >>> neg_list.append(-5)
+    >>> neg_list.print_sorted()
+    [-5, -4, -3, -2, -1]
+
+    >>> one_ele = MyList()
+    >>> one_ele.append(5)
+    >>> one_ele.print_sorted()
+    [5]
+
+    >>> one_pos = MyList()
+    >>> one_pos.append(-25)
+    >>> one_pos.append(20)
+    >>> one_pos.append(-12)
+    >>> one_pos.print_sorted()
+    [-25, -12, 20]
+
+    >>> one_neg = MyList()
+    >>> one_neg.append(25)
+    >>> one_neg.append(-20)
+    >>> one_neg.append(12)
+    >>> one_neg.print_sorted()
+    [-20, 12, 25]
