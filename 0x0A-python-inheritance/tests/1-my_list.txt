@@ -1,0 +1,24 @@
+=================================
+ Test cases for 1-my_list.py
+=================================
+
+# creates a object and imports our module to python3 terminal
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> test_list = MyList()
+
+ORDER TESTS
+=================
+Should print a list that is sorted in ascending order
+Integers:
+
+::
+    >>> test_list = MyList()
+    >>> test_list.append(1)
+    >>> test_list.append(4)
+    >>> test_list.append(2)
+    >>> test_list.append(3)
+    >>> test_list.append(5)
+    >>> test_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    
