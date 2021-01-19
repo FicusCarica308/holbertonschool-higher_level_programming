@@ -55,8 +55,8 @@ Integers:
     [-20, 12, 25]
 
     >>> one_neg = MyList()
-    >>> one_neg.append(-25)
+    >>> one_neg.append(30)
     >>> one_neg.append(20)
     >>> one_neg.append(12)
     >>> one_neg.print_sorted()
-    [-25, 12, 20]
+    [12, 20, 30]
