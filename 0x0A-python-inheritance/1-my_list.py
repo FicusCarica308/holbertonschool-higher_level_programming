@@ -9,5 +9,9 @@ class MyList(list):
     def print_sorted(self):
         """prints a sorted list instead of a normal list"""
         copy_list = list(self)
+        for i in self:
+            if i == None:
+                print(copy_list)
+                return
         list.sort(copy_list)
         print(copy_list)

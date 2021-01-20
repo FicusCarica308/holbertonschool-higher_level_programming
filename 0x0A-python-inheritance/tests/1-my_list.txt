@@ -60,5 +60,7 @@ Integers:
 
     >>> one_neg = MyList()
     >>> one_neg.append(None)
+    >>> one_neg.append(2)
+    >>> one_neg.append(3)
     >>> one_neg.print_sorted()
-    [None]
+    [None, 2, 3]
