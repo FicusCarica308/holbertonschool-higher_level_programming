@@ -25,3 +25,7 @@ should print either a TypeError or ValueError
     ValueError: age must be greater than 0
 
     >>> bg.integer_validator("age", 30)
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ValueError:  must be greater than 0
