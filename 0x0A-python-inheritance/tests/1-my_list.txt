@@ -57,3 +57,8 @@ Integers:
     >>> one_neg = MyList()
     >>> one_neg.print_sorted()
     []
+
+    >>> one_neg = MyList()
+    >>> one_neg.append(None)
+    >>> one_neg.print_sorted()
+    [None]
