@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Module that has a function using json encoding"""
+"""Module that has a function that returns a value"""
 
 
 def class_to_json(obj):
-    """converts a class to json"""
+    """returns the dictionay representation of a object"""
     return obj.__dict__
