@@ -27,4 +27,7 @@ class Student:
     def reload_from_json(self, json):
         """ will remove and add new attributes and values given in json """
         for key_rm in dict(self.__dict__):
-            setattr(self, key_rm, json[key_rm])
+            try:
+                setattr(self, key_rm, json[key_rm])
+            except:
+                pass
