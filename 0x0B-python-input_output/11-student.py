@@ -32,4 +32,7 @@ class Student:
             except:
                 pass
         for key in json:
-            setattr(self, key, json[key])
+            try:
+                setattr(self, key, json[key])
+            except:
+                pass
