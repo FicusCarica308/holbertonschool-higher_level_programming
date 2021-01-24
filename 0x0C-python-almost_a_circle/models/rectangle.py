@@ -6,6 +6,28 @@ class from our models.base module (this dicrectory)
 from models.base import Base
 
 
+def raise_exc(attribute="", error=""):
+    """
+    raises an exception based on attribute and error information
+    Args:
+        attribute (str): what attr we are rasing for. Defaults to "".
+        error (str): what error we are rasing. Defaults to "".
+        - Error should be one of two type "Type" or "Raise"
+
+    Raises:
+        TypeError: Raises if "Type" is True for any attr
+        ValueError(one): (raises if x or y)
+        ValueError(two): raises for width or height
+    """
+    if error == "Type":
+        raise TypeError("{} must be an integer".format(attribute))
+    elif error == "Value":
+        if attribute == "x" or attribute == "y":
+            raise ValueError("{} must be >= 0".format(attribute))
+        else:
+            raise ValueError("{} must be > 0".format(attribute))
+
+
 class Rectangle(Base):
     """
     In this class we intilize a new model from our superclass
@@ -45,6 +67,10 @@ class Rectangle(Base):
         Args:
             width (int): the new width value for the attribute
         """
+        if type(width) is not int:
+            raise_exc("width", "Type")
+        elif width <= 0:
+            raise_exc("width", "Value")
         self.__width = width
 
 # ---------------------HEIGHT----------------
@@ -64,6 +90,10 @@ class Rectangle(Base):
         Args:
             height (int): the new height value for the attribute
         """
+        if type(height) is not int:
+            raise_exc("height", "Type")
+        elif height <= 0:
+            raise_exc("height", "Value")
         self.__height = height
 
 # ---------------------X-CORDNATE----------------
@@ -83,6 +113,10 @@ class Rectangle(Base):
         Args:
             x (int): the new X value for the attribute
         """
+        if type(x) is not int:
+            raise_exc("x", "Type")
+        elif x < 0:
+            raise_exc("x", "Value")
         self.__x = x
 
 # ---------------------Y-CORDNATE----------------
@@ -102,4 +136,8 @@ class Rectangle(Base):
         Args:
             y (int): the new Y value for the attribute
         """
+        if type(y) is not int:
+            raise_exc("y", "Type")
+        elif y < 0:
+            raise_exc("y", "Value")
         self.__y = y
