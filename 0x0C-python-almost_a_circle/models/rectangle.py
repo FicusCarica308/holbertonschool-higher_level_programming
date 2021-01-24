@@ -141,3 +141,10 @@ class Rectangle(Base):
         elif y < 0:
             raise_exc("y", "Value")
         self.__y = y
+
+# -----------------AREA------------------
+    def area(self):
+        """
+        calulates the area of the rectangle and returns it
+        """
+        return self.width * self.height
