@@ -2,6 +2,7 @@
 """
 This file contains our base class for our models project.
 """
+import json
 
 
 class Base:
@@ -25,3 +26,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+# ---------------DICT-TO-JSON-STR--------------
+    def to_json_string(list_dictionaries):
+        """ returns a JSON string from a dictionary """
+        if list_dictionaries is None or list_dictionaries[0] is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
