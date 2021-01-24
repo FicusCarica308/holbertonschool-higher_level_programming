@@ -53,3 +53,14 @@ Integers:
     >>> one_neg.append(12)
     >>> one_neg.print_sorted()
     [-20, 12, 25]
+
+    >>> one_neg = MyList()
+    >>> one_neg.print_sorted()
+    []
+
+    >>> one_neg = MyList()
+    >>> one_neg.append(None)
+    >>> one_neg.append(2)
+    >>> one_neg.append(3)
+    >>> one_neg.print_sorted()
+    [None, 2, 3]
