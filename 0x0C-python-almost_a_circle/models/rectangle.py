@@ -180,3 +180,8 @@ class Rectangle(Base):
 
         for index in range(len(args)):
             setattr(self, attrs[index], args[index])
+
+# ---------------DICT-REP-----------------
+    def to_dictionary(self):
+        """ Returns a dictionary representation of a rectangle """
+        return self.__dict__
