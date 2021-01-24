@@ -62,3 +62,9 @@ class Square(Rectangle):
 
         for index in range(len(args)):
             setattr(self, attrs[index], args[index])
+
+# ---------------DICT-REP-----------------
+    def to_dictionary(self):
+        """ Returns a dictionary representation of a rectangle """
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'size': self.size}
