@@ -154,8 +154,12 @@ class Rectangle(Base):
         """
         prints out a representation of a rectangle in stdout
         """
-        for i in range(self.height):
-            for j in range(self.width):
+        for space in range(self.y):
+            print()
+        for column in range(self.height):
+            for space in range(self.x):
+                    print(' ', end="")
+            for row in range(self.width):
                 print('#', end="")
             print()
 
