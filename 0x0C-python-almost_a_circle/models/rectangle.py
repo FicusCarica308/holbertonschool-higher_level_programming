@@ -165,12 +165,13 @@ class Rectangle(Base):
 
 # ------------------STR------------------
     def __str__(self):
+        """returns a printable string rep of our rectangle"""
         string = "[Rectangle] ({}) {}/{} - {}/{}"
-        """ """
         return string.format(self.id, self.x, self.y, self.width, self.height)
 
 # -----------------UPDATE----------------
     def update(self, *args, **kwargs):
+        """ updates our current attributes """
         if len(args) == 0:
             for key, value in kwargs.items():
                 if key == "height":
