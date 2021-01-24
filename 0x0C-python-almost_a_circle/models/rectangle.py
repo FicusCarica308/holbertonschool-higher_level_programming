@@ -168,3 +168,17 @@ class Rectangle(Base):
         string = "[Rectangle] ({}) {}/{} - {}/{}"
         """ """
         return string.format(self.id, self.x, self.y, self.width, self.height)
+
+# -----------------UPDATE----------------
+    def update(self, *args):
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            if i == 1:
+                self.width = args[i]
+            if i == 2:
+                self.height = args[i]
+            if i == 3:
+                self.x = args[i]
+            if i == 4:
+                self.y = args[i]
