@@ -74,3 +74,13 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return list()
         return json.loads(json_string)
+
+# ---------------DICT-TO-INSTANCE--------------------
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        creates a new instance of a given class with kwarg dictionary
+        """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
