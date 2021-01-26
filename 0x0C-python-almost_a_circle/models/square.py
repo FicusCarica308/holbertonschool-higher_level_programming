@@ -13,7 +13,7 @@ class Square(Rectangle):
     Args:
         Rectangle (class): creates a instance of a rectangle
     """
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, size=None, x=0, y=0, id=None):
         """
         initiates our square instance
         Args:

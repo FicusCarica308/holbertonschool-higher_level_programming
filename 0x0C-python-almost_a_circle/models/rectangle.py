@@ -34,7 +34,7 @@ class Rectangle(Base):
     and setup a new rectangle class with attributes width, height, x, y,
     and id. ID is passed to the super class to initilize out model properly
     """
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width=None, height=None, x=0, y=0, id=None):
         """
         inits our class with below arguments
         Args:
