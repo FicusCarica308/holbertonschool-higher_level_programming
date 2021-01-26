@@ -64,3 +64,13 @@ class Base:
         with open("{}.json".format(cls.__name__),
                   mode="w", encoding="utf-8") as file:
             file.write(string_rep)
+
+# --------------JSON-STR-TO-DICT---------------------
+    def from_json_string(json_string):
+        """Converts json string of dicts to python dict() objects"""
+        if type(json_string) is not str\
+                and json_string is not None:
+            raise TypeError("from_json_string: must be a str()")
+        if json_string is None or len(json_string) == 0:
+            return list()
+        return json.loads(json_string)
