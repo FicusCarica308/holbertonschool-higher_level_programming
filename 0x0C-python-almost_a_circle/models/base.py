@@ -28,18 +28,31 @@ class Base:
             self.id = Base.__nb_objects
 
 # ---------------DICT-TO-JSON-STR--------------
-    def to_json_string(list_dictionaries):
+    def to_json_string(list_dictionaries=None):
         """ returns a JSON string from a dictionary """
-        if list_dictionaries is None or list_dictionaries[0] is None:
+        if type(list_dictionaries) is not list and list_dictionaries is not None:
+            raise TypeError("to_json_string: must be list of dict()")
+        for dicti in list_dictionaries:
+            if type(dicti) is not dict:
+                raise ValueError("to_json_string: must be list of dict()")
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
 # --------------JSON-TO-FILE---------------------
     @classmethod
-    def save_to_file(cls, list_objs):
+    def save_to_file(cls, list_objs=None):
+        """saves json string repr of a list of object-dicts repr to a file"""
         list_dict = []
-        for obj in list_objs:
-            list_dict.append(obj.to_dictionary())
+        if list_objs is not None:
+            if type(list_objs) is not list:
+                raise TypeError("save_to_file: arg must be list() of objs")
+            for obj in list_objs:
+                if obj is None or isinstance(obj, Base) is not True:
+                    raise ValueError("save_to_file: Objects in list must be a instances of Square or Rectangle")
+                list_dict.append(obj.to_dictionary())
             string_rep = cls.to_json_string(list_dict)
+        else:
+            string_rep = "[]"
         with open("{}.json".format(cls.__name__), mode="w", encoding="utf-8") as file:
             file.write(string_rep)
