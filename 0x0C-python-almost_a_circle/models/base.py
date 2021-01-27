@@ -90,7 +90,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """returns a list of new instances from a json formatted file
-        of dictionarys 
+        of dictionarys
         """
         instances = list()
         try:
