@@ -28,18 +28,19 @@ class Base:
             self.id = Base.__nb_objects
 
 # ---------------DICT-TO-JSON-STR--------------
+    @staticmethod
     def to_json_string(list_dictionaries=None):
         """ returns a JSON string from a dictionary """
         if type(list_dictionaries) is not list\
                 and list_dictionaries is not None:
             raise TypeError("to_json_string: must be list of dict()")
 
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+
         for dicti in list_dictionaries:
             if type(dicti) is not dict:
                 raise ValueError("to_json_string: must be list of dict()")
-
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
 
         return json.dumps(list_dictionaries)
 
@@ -89,7 +90,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """returns a list of new instances from a json formatted file
-        of dictionarys
+        of dictionarys 
         """
         instances = list()
         try:
