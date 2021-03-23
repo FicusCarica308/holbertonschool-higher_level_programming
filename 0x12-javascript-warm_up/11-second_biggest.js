@@ -8,4 +8,4 @@ for (let iter = 2; iter < process.argv.length; iter++) {
     first = num;
   }
 }
-console.log(second);
+console.log(String(second));
