@@ -4,7 +4,7 @@ Descr:
 > Takes 3 arguments: mysql username, mysql password and database name
 > import State and Base from model_state
 > connects to a MySQL server running on localhost at port 3306
-> output states sorted in ascending order by states.id
+> output fist state in states by states.id without calling .all()
 
 Comments:
 the ^^^ just means the line of code above the comment is what it
@@ -26,10 +26,10 @@ if __name__ == "__main__":
     # ^^^^^binds database(engine) to session maker
     session = session_obj()
     # ^^^^^^sets up new query session from session maker
-    states = session.query(State).order_by(State.id).all()
+    result = session.query(State).order_by(State.id).first()
     # ^^^^^^querys all object entrys in DB
-    for state in states:
-        # ^^^^loops through each object in engine aka entry
-        print("{}: {}".format(state.id, state.name))
-        # ^^^^prints out that entry based on its attributes
+    if (result is not None):
+        print("{}: {}".format(result.id, result.name))
+    else:
+        print("Nothing")
     session.close()
