@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
 Descr:
-> Takes 3 arguments: mysql username, mysql password and database name
+> Takes 3 arguments: mysql username, mysql password and database name, state
 > import State and Base from model_state
 > connects to a MySQL server running on localhost at port 3306
-> lists all state objects in given database that contain the letter 'a'
+> lists a single state object that matches the given state name
 > order by ascending by state.id
 
 Comments:
