@@ -27,7 +27,7 @@ if __name__ == "__main__":
     session = session_obj()
     # ====Session Querry====
     cities = session.query(State, City).join(City).order_by(City.id).all()
-    # ^joins states and cities tables together using .join()
+    # ^joins states and cities tables together using .join() using relationship
     for state, city in cities:  # prints out objects in fromat
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
