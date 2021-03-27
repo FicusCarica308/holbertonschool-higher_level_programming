@@ -26,7 +26,7 @@ if __name__ == "__main__":
     city_cur = city_data.cursor()
     city_cur.execute("SELECT cities.name\
                      FROM states RIGHT JOIN cities ON\
-                     states.id=cities.state_id WHERE states.name=%s\
+                     states.id=cities.state_id WHERE BINARY states.name=%s\
                      ORDER BY cities.id ASC", (sys.argv[4],))
     rows = city_cur.fetchall()
     for row in rows:
