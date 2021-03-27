@@ -18,7 +18,7 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    check = 0
+    no_output = 0  # used to flag if output is found or not 0 if no 1 if yes
     city_data = MySQLdb.connect(host="localhost",
                                 port=3306,
                                 user=sys.argv[1],
@@ -35,9 +35,9 @@ if __name__ == "__main__":
         if row != rows[-1]:
             print(", ", end="")
         else:
-            check = 1
+            check = 1  # signals that output has been found
             print()
-    if (check == 0):
+    if (no_output == 0):  # prints if no output is found
         print()
     city_cur.close()
     city_data.close()
