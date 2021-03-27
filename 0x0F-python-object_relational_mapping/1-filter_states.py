@@ -26,7 +26,7 @@ if __name__ == "__main__":
     states_cur.execute("SELECT * FROM states WHERE name\
                         LIKE 'N%' ORDER BY id ASC")
     rows = states_cur.fetchall()
-    if (rows is not None):
+    if (rows[0] is not None):
         for row in rows:
             print(row)
     states_cur.close()
