@@ -18,6 +18,7 @@ import MySQLdb
 
 
 if __name__ == "__main__":
+    check = 0
     city_data = MySQLdb.connect(host="localhost",
                                 port=3306,
                                 user=sys.argv[1],
@@ -34,6 +35,9 @@ if __name__ == "__main__":
         if row != rows[-1]:
             print(", ", end="")
         else:
+            check = 1
             print()
+    if (check == 0):
+        print()
     city_cur.close()
     city_data.close()
