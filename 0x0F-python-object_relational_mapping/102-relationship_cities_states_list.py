@@ -4,9 +4,9 @@ Descr:
 > Takes 3 arguments: mysql username, mysql password and database name
 > import State and Base from model_state
 > connects to a MySQL server running on localhost at port 3306
-> lists all State objects, and corresponding City objects,
-    contained in the database hbtn_0e_101_usa using only
-    the relation ship between State and City
+> lists all City objects contained in the database
+    hbtn_0e_101_usa using only the relation ship
+    between State and City
 > how it works: When the results of the query are passed
     there is a second list indexed list within the first
     that can be iterated through
@@ -32,8 +32,7 @@ if __name__ == "__main__":
     cool = result[0].cities[0]
     # ==== Prints out in given format using relationship ====
     for state in result:
-        print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("    {}: {}".format(city.id, city.name))
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
     # ==== close ====
     session.close()
