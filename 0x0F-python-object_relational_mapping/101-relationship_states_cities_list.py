@@ -30,7 +30,6 @@ if __name__ == "__main__":
     session = session_obj()
     # ====Collecting all States====
     result = session.query(State).order_by(State.id).all()
-    cool = result[0].cities[0]
     # ==== Prints out in given format using relationship ====
     for state in result:
         print("{}: {}".format(state.id, state.name))
