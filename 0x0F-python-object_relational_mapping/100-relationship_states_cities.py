@@ -22,6 +22,7 @@ if __name__ == "__main__":
                                                                    av[2],
                                                                    av[3])
     states_engine = create_engine(engine_args)
+    Base.metadata.create_all(states_engine)
     # ====Session Stuff====
     session_obj = sessionmaker(states_engine)
     session = session_obj()
