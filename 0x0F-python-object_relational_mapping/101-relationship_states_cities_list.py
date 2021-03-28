@@ -28,7 +28,7 @@ if __name__ == "__main__":
     session_obj = sessionmaker(states_engine)
     session = session_obj()
     # ====Collecting all States====
-    result = session.query(State).all()
+    result = session.query(State).order_by(State.id).all()
     cool = result[0].cities[0]
     # ==== Prints out in given format using relationship ====
     for state in result:
