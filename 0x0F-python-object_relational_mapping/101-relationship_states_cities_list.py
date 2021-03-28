@@ -29,9 +29,9 @@ if __name__ == "__main__":
     for state, city in results:  # prints out objects in fromat
         if (start_name != state.name):
             print("{}: {}".format(state.id, state.name))
-            print("\t{}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
             start_name = state.name
         else:
-            print("\t{}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
     # ==== close ====
     session.close()
