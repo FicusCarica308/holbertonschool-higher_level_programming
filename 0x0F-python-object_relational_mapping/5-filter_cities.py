@@ -35,7 +35,7 @@ if __name__ == "__main__":
         if row != rows[-1]:
             print(", ", end="")
         else:
-            check = 1  # signals that output has been found
+            no_output = 1  # signals that output has been found
             print()
     if (no_output == 0):  # prints if no output is found
         print()
