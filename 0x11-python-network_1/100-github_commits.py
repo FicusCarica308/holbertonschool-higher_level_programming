@@ -12,6 +12,6 @@ if __name__ == "__main__":
     from sys import argv
 
     response = requests.get('https://api.github.com/repos/{}/{}/commits'
-                            .format(argv[1], argv[2]), params={'per_page': 10})
+                            .format(argv[2], argv[1]), params={'per_page': 10})
     for res in response.json():
         print("{}: {}".format(res['sha'], res['commit']['author']['name']))
