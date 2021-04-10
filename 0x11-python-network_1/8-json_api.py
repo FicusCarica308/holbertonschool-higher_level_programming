@@ -13,10 +13,10 @@ if __name__ == "__main__":
     import requests
     from sys import argv as argv
 
-    if len(argv) > 1:
-        param = {'q': argv[1]}
-    else:
+    if len(argv) == 1:
         param = {'q': ""}
+    else:
+        param = {'q': argv[1]}
     response = requests.post("http://0.0.0.0:5000/search_user", data=param)
     try:
         json = response.json()
