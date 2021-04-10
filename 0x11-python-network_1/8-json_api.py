@@ -5,7 +5,7 @@ a Python script that takes in a letter and sends a POST request to
 http://0.0.0.0:5000/search_user with the letter as a parameter.
 
 Checks for invalid json using try: except:
-with json.JSONDecodeError 
+with json.JSONDecodeError
 """
 
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
         param = {'q': ""}
     else:
         param = {'q': argv[1]}
-    response = requests.post("http://6897227ee90a.b380b380.hbtn-cod.io:5000/search_user", data=param)
+    response = requests.post("http://0.0.0.0:5000/search_user", data=param)
     try:
         json = response.json()
         if not json:
