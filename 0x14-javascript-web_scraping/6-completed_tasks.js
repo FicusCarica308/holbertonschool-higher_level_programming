@@ -11,8 +11,8 @@ request(options, (err, res, body) => {
   }
   const dataDict = JSON.parse(body);
   for (const data of dataDict) {
-    if (data.userId in outputDict === false) { outputDict[data.userId] = 0; }
     if (data.completed === true) {
+      if (data.userId in outputDict === false) { outputDict[data.userId] = 0; }
       outputDict[data.userId] += 1;
     }
   }
